@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MainCard from "./components/card";
+import { MDBCol, MDBRow } from "mdb-react-ui-kit";
+import Header from "./components/navbar"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+          <MDBRow className='row-cols-1 row-cols-md-3 g-2'>
+        <MDBCol>
+          <MainCard />
+        </MDBCol>
+        <MDBCol>
+          <MainCard/>
+        </MDBCol>
+        <MDBCol>
+          <MainCard/>
+        </MDBCol>
+        <MDBCol>
+          <MainCard/>
+        </MDBCol>
+        <MDBCol>
+          <MainCard />
+        </MDBCol>
+        <MDBCol>
+          <MainCard/>
+        </MDBCol>
+        <MDBCol>
+          <MainCard/>
+        </MDBCol>
+      
+      </MDBRow>
     </div>
+
   );
-}
+};
 
 export default App;
